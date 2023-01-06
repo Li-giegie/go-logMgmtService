@@ -1,0 +1,20 @@
+app:
+    - name: 应用1
+      log_dir:
+        - ./test/1.log
+      out_of_data: 3
+      log_tag:
+        - ".log"
+      save_path: './test/save/'
+    - name: 应用2
+      log_dir:
+        - ./test/2.log
+      out_of_data: 3
+      log_tag:
+        - ".log"
+      save_path: './test/save/'
+pack_algorithm: zip
+out_of_data: 3
+log_tag:
+    - .log
+save_path: "./"
