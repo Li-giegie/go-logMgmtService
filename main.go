@@ -229,6 +229,11 @@ func (l *LogMgmtService) FindLogInfo(key string) ([]string,error) {
 	}
 }
 
+// 删除日志文件内容返回路径
+func (l *LogMgmtService) DelLogFile(key string) (string,error) {
+	return key,os.Remove(AesDecrypt(key,NewKey(FindLogFile_KEY)))
+}
+
 func (a *_appService) Execute()  {
 
 	setInterval(time.Duration(a.OutOfData), func() {
